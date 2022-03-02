@@ -5,7 +5,6 @@ import java.util.List;
 import java.util.Locale;
 
 import entities.Product;
-import util.ProductPredicate;
 
 public class Program {
 	public static void main(String[] args) {
@@ -17,7 +16,7 @@ public class Program {
 		list.add(new Product("Tablet", 350.00));
 		list.add(new Product("HD case", 80.90));
 		
-		list.removeIf(Product::staticProductPredicate);
+		list.removeIf(Product::nonStaticProductPredicate);
 		print(list);
 		
 	}
